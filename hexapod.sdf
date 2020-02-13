@@ -1,0 +1,1762 @@
+<?xml version="1.0" ?>
+<!--
+TODO: inertia http://gazebosim.org/tutorials?tut=inertia&cat=build_robot
+TODO: joint motorized
+TODO: joint limits
+-->
+<sdf version="1.6">
+  <world name="default">
+    <gravity>0 0 -9.81</gravity>
+
+    <model name="hexapod">
+      <link name="box">
+        <!-- We count all component within the box as the box
+        (NanoPi, pcb, connectors included) -->
+        <pose>0 0 .203 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <!-- Putting here an octogone might be a nice optimization -->
+              <uri>meshes/box.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/box.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.667</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 1 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_1">
+        <pose>.066695 -0.063697 0.2041193 0 0 -0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_1">
+        <pose>0.091561 -0.073562 0.2041193 0.0 0.0 -0.78539</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_2">
+        <pose>0.114846208538 -0.0958851709964 0.1961644 1.57079 -0.7854 -0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_3">
+        <pose>0.139887890732 -0.120708657232 0.161527 1.57079 2.3561945 -0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_1">
+        <pose>0.144735157965 -0.126863982193 0.1226097 0.0 0.0 -0.78539</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_1">
+        <pose>0.145054064677 -0.127054191313 0.07309 0.0 0.0 -0.78539</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_1_joint_1" type="revolute">
+        <parent>servomotor_1</parent>
+        <child>joint_1</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_1_servomotor_2" type="revolute">
+        <parent>joint_1</parent>
+        <child>servomotor_2</child>
+        <pose>0.0 0.011 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_2_servomotor_3" type="fixed">
+        <parent>servomotor_2</parent>
+        <child>servomotor_3</child>
+      </joint>
+
+      <joint name="servomotor_3_foot_1" type="revolute">
+        <parent>servomotor_3</parent>
+        <child>foot_1</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_1_endcap_1" type="fixed">
+        <parent>foot_1</parent>
+        <child>endcap_1</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 2 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_4">
+        <pose>0.092225 0 0.2041193 0 0 0</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_2">
+        <pose>0.116784 0.010607 0.2041193 0.0 0.0 0.0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_5">
+        <pose>0.149034 0.011287 0.1961644 1.57079 -0.7854 0.0</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_6">
+        <pose>0.184294 0.011441 0.161527 1.57079 2.3561945 0.0</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_2">
+        <pose>0.192074 0.010516 0.1226097 0.0 0.0 0.0</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_2">
+        <pose>0.192434 0.010607 0.07309 0.0 0.0 0.0</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_4_joint_2" type="revolute">
+        <parent>servomotor_4</parent>
+        <child>joint_2</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_2_servomotor_5" type="revolute">
+        <parent>joint_2</parent>
+        <child>servomotor_5</child>
+        <pose>0.0 0.011 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_5_servomotor_6" type="fixed">
+        <parent>servomotor_5</parent>
+        <child>servomotor_6</child>
+      </joint>
+
+      <joint name="servomotor_6_foot_2" type="revolute">
+        <parent>servomotor_6</parent>
+        <child>foot_2</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_2_endcap_2" type="fixed">
+        <parent>foot_2</parent>
+        <child>endcap_2</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 3 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_7">
+        <pose>.066695 0.063697 0.2041193 0 0 0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_3">
+        <pose>0.076561 0.088562 0.2041193 0.0 0.0 0.78539</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_8">
+        <pose>0.0988845511662 0.111846844069 0.1961644 1.57079 -0.7854 0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_9">
+        <pose>0.123708446249 0.136888120972 0.161527 1.57079 2.3561945 0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_3">
+        <pose>0.129863850349 0.141735287708 0.1226097 0.0 0.0 0.78539</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_3">
+        <pose>0.130054064677 0.142054191313 0.07309 0.0 0.0 0.78539</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_7_joint_3" type="revolute">
+        <parent>servomotor_7</parent>
+        <child>joint_3</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_3_servomotor_8" type="revolute">
+        <parent>joint_3</parent>
+        <child>servomotor_8</child>
+        <pose>0.0 0.011 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_8_servomotor_9" type="fixed">
+        <parent>servomotor_8</parent>
+        <child>servomotor_9</child>
+      </joint>
+
+      <joint name="servomotor_9_foot_3" type="revolute">
+        <parent>servomotor_9</parent>
+        <child>foot_3</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_3_endcap_3" type="fixed">
+        <parent>foot_3</parent>
+        <child>endcap_3</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 4 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_10">
+        <pose>-0.066695 0.063697 0.2041193 0 0 -0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_4">
+        <pose>-0.076561 0.088562 0.2041193 0.0 0.0 2.35617</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_11">
+        <pose>-0.0998454795941 0.11088593133 0.1961644 1.57079 -0.7854 2.35617</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_12">
+        <pose>-0.124886351199 0.135710235254 0.161527 1.57079 2.3561945 2.35617</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_4">
+        <pose>-0.129733417436 0.141865718491 0.1226097 0.0 0.0 2.35617</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_4">
+        <pose>-0.130052317936 0.142055938025 0.07309 0.0 0.0 2.35617</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_10_joint_4" type="revolute">
+        <parent>servomotor_10</parent>
+        <child>joint_4</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_4_servomotor_11" type="revolute">
+        <parent>joint_4</parent>
+        <child>servomotor_11</child>
+        <pose>0.0 0.011 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_11_servomotor_12" type="fixed">
+        <parent>servomotor_11</parent>
+        <child>servomotor_12</child>
+      </joint>
+
+      <joint name="servomotor_12_foot_4" type="revolute">
+        <parent>servomotor_12</parent>
+        <child>foot_4</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_4_endcap_4" type="fixed">
+        <parent>foot_4</parent>
+        <child>endcap_4</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 5 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_13">
+        <pose>-0.092225 0 0.2041193 0 0 0</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_5">
+        <pose>-0.116784 0.010607 0.2041193 0.0 0.0 3.14156</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_14">
+        <pose>-0.149034022187 0.00992805307863 0.1961644 1.57079 -0.7854 3.14156</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_15">
+        <pose>-0.184294027197 0.00977520444429 0.161527 1.57079 2.3561945 3.14156</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_5">
+        <pose>-0.192073996988 0.0107004584887 0.1226097 0.0 0.0 3.14156</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_5">
+        <pose>-0.19243399996 0.0106094702441 0.07309 0.0 0.0 3.14156</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_13_joint_5" type="revolute">
+        <parent>servomotor_13</parent>
+        <child>joint_5</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_5_servomotor_14" type="revolute">
+        <parent>joint_5</parent>
+        <child>servomotor_14</child>
+        <pose>-0.116784 0.021607 0.2041193 0.0 0.0 3.14156</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_14_servomotor_15" type="fixed">
+        <parent>servomotor_14</parent>
+        <child>servomotor_15</child>
+      </joint>
+
+      <joint name="servomotor_15_foot_5" type="revolute">
+        <parent>servomotor_15</parent>
+        <child>foot_5</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_5_endcap_5" type="fixed">
+        <parent>foot_5</parent>
+        <child>endcap_5</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ====================== Leg 6 ====================== -->
+      <!-- =================================================== -->
+      <link name="servomotor_16">
+        <pose>-0.066695 -0.063697 0.2041193 0 0 0.78539</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="joint_6">
+        <pose>-0.091561 -0.073562 0.2041193 0.0 0.0 3.92695</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_17">
+        <pose>-0.113885311488 -0.0968461151127 0.1961644 1.57079 -0.7854 3.92695</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="servomotor_18">
+        <pose>-0.138710024245 -0.121886581413 0.161527 1.57079 2.3561945 3.92695</pose>
+        <collision name="collision">
+          <pose>0 -0.002 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>.024 .0451 .0347</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/servomotor.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.047</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="foot_6">
+        <pose>-0.144865586619 -0.12673354715 0.1226097 0.0 0.0 3.92695</pose>
+        <collision name="collision">
+          <pose>0 0 -0.006 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.024 0.040 0.0993</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/foot.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.0105</mass>
+          <inertia>
+            <ixx>0.083</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.083</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.083</izz>
+          </inertia>
+        </inertial>
+      </link>
+
+      <link name="endcap_6">
+        <pose>-0.14505581136 -0.127052444544 0.07309 0.0 0.0 3.92695</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/endcap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0</ixx><!-- TODO -->
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.0</izz>
+          </inertia>
+        </inertial>
+        <!-- endcap has a negligeable inertia -->
+      </link>
+
+      <joint name="servomotor_16_joint_6" type="revolute">
+        <parent>servomotor_16</parent>
+        <child>joint_6</child>
+        <pose>-0.0245 0.0 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_6_servomotor_17" type="revolute">
+        <parent>joint_6</parent>
+        <child>servomotor_17</child>
+        <pose>0.0 0.011 0.0 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 0.0 1.0</xyz>
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="servomotor_17_servomotor_18" type="fixed">
+        <parent>servomotor_17</parent>
+        <child>servomotor_18</child>
+      </joint>
+
+      <joint name="servomotor_18_foot_6" type="revolute">
+        <parent>servomotor_18</parent>
+        <child>foot_6</child>
+        <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <dynamics>
+            <damping>0</damping><!-- TODO -->
+            <friction>0</friction><!-- TODO -->
+          </dynamics>
+          <limit>
+            <lower>-1.5708</lower><!-- TODO -->
+            <upper>1.5708</upper><!-- TODO -->
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="foot_6_endcap_6" type="fixed">
+        <parent>foot_6</parent>
+        <child>endcap_6</child>
+      </joint>
+
+
+      <!-- =================================================== -->
+      <!-- ==================== Box - legs =================== -->
+      <!-- =================================================== -->
+
+      <joint name="box_servomotor_1" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_1</child>
+      </joint>
+
+      <joint name="box_servomotor_4" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_4</child>
+      </joint>
+
+      <joint name="box_servomotor_7" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_7</child>
+      </joint>
+
+      <joint name="box_servomotor_10" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_10</child>
+      </joint>
+
+      <joint name="box_servomotor_13" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_13</child>
+      </joint>
+
+      <joint name="box_servomotor_16" type="fixed">
+        <parent>box</parent>
+        <child>servomotor_16</child>
+      </joint>
+    </model>
+
+    <physics type="bullet">
+      <max_step_size>0.001</max_step_size>
+      <bullet>
+        <solver>
+          <type>sequential_impulse</type>
+          <min_step_size>0.0001</min_step_size>
+          <iters>50</iters>
+          <sor>1.3</sor>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_surface_layer>0.001</contact_surface_layer>
+          <split_impulse>1</split_impulse>
+          <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+        </constraints>
+      </bullet>
+    </physics>
+  </world>
+</sdf>
+
