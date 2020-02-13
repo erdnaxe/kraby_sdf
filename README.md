@@ -3,6 +3,8 @@
 SDF description of Kraby the hexapod.
 It can be used to simulate the robot in Gazebo or BulletPhysics.
 
+![Example of PyBullet simulation](doc/pybullet_fullrobot.png)
+
 ## Running simulations
 
 ### with Gazebo
