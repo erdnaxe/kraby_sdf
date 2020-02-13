@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <!--
-TODO: inertia http://gazebosim.org/tutorials?tut=inertia&cat=build_robot
 TODO: joint motorized
 TODO: joint limits
 -->
@@ -111,12 +110,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -217,12 +216,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
@@ -387,12 +386,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -493,12 +492,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
@@ -663,12 +662,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -769,12 +768,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
@@ -939,12 +938,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -1045,12 +1044,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
@@ -1215,12 +1214,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -1321,12 +1320,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
@@ -1597,12 +1596,12 @@ TODO: joint limits
         <inertial>
           <mass>0.0105</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>5.624930021684789</ixx>
+            <ixy>-0.0007514028791903619</ixy>
+            <ixz>0.0005912555287889139</ixz>
+            <iyy>4.568350194084484</iyy>
+            <iyz>0.020270474186461353</iyz>
+            <izz>1.7085021792735104</izz>
           </inertia>
         </inertial>
       </link>
