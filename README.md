@@ -28,3 +28,8 @@ gazebo hexapod.sdf -u --verbose
 See `simulation_demo.py`.
 
 An OpenAI Gym environment is WIP.
+
+## License
+
+This project is under GNU General Public License v3.0 because we believe in
+open development. Please see LICENSE file for more details.
