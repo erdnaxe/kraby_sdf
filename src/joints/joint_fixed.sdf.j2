@@ -1,0 +1,6 @@
+{% macro joint_fixed(parent, child) %}
+      <joint name="{{ parent }}_{{ child }}" type="fixed">
+        <parent>{{ parent }}</parent>
+        <child>{{ child }}</child>
+      </joint>
+{% endmacro %}

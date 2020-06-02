@@ -48,9 +48,8 @@ TODO: joint limits
         </inertial>
       </link>
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 1 ====================== -->
-      <!-- =================================================== -->
+
+      <!-- Leg 1 -->
       <link name="servomotor_1">
         <pose>.066695 -0.063697 0.2041193 0 0 -0.78539</pose>
         <collision name="collision">
@@ -262,7 +261,6 @@ TODO: joint limits
         <!-- endcap has a negligeable inertia -->
       </link>
 
-
       <joint name="servomotor_1_joint_1" type="revolute">
         <parent>servomotor_1</parent>
         <child>joint_1</child>
@@ -307,7 +305,7 @@ TODO: joint limits
         <child>foot_1</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -325,9 +323,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 2 ====================== -->
-      <!-- =================================================== -->
+      <!-- Leg 2 -->
       <link name="servomotor_4">
         <pose>0.092225 0 0.2041193 0 0 0</pose>
         <collision name="collision">
@@ -528,7 +524,7 @@ TODO: joint limits
         <inertial>
           <mass>0.5</mass>
           <inertia>
-            <ixx>0.0</ixx><!-- TODO -->
+            <ixx>0.0</ixx>
             <ixy>0.0</ixy>
             <ixz>0.0</ixz>
             <iyy>0.0</iyy>
@@ -583,7 +579,7 @@ TODO: joint limits
         <child>foot_2</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -601,9 +597,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 3 ====================== -->
-      <!-- =================================================== -->
+      <!-- Leg 3 -->
       <link name="servomotor_7">
         <pose>.066695 0.063697 0.2041193 0 0 0.78539</pose>
         <collision name="collision">
@@ -804,7 +798,7 @@ TODO: joint limits
         <inertial>
           <mass>0.5</mass>
           <inertia>
-            <ixx>0.0</ixx><!-- TODO -->
+            <ixx>0.0</ixx>
             <ixy>0.0</ixy>
             <ixz>0.0</ixz>
             <iyy>0.0</iyy>
@@ -859,7 +853,7 @@ TODO: joint limits
         <child>foot_3</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -877,9 +871,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 4 ====================== -->
-      <!-- =================================================== -->
+      <!-- Leg 4 -->
       <link name="servomotor_10">
         <pose>-0.066695 0.063697 0.2041193 0 0 -0.78539</pose>
         <collision name="collision">
@@ -1080,7 +1072,7 @@ TODO: joint limits
         <inertial>
           <mass>0.5</mass>
           <inertia>
-            <ixx>0.0</ixx><!-- TODO -->
+            <ixx>0.0</ixx>
             <ixy>0.0</ixy>
             <ixz>0.0</ixz>
             <iyy>0.0</iyy>
@@ -1135,7 +1127,7 @@ TODO: joint limits
         <child>foot_4</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -1153,9 +1145,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 5 ====================== -->
-      <!-- =================================================== -->
+      <!-- Leg 5 -->
       <link name="servomotor_13">
         <pose>-0.092225 0 0.2041193 0 0 0</pose>
         <collision name="collision">
@@ -1356,7 +1346,7 @@ TODO: joint limits
         <inertial>
           <mass>0.5</mass>
           <inertia>
-            <ixx>0.0</ixx><!-- TODO -->
+            <ixx>0.0</ixx>
             <ixy>0.0</ixy>
             <ixz>0.0</ixz>
             <iyy>0.0</iyy>
@@ -1411,7 +1401,7 @@ TODO: joint limits
         <child>foot_5</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -1429,9 +1419,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ====================== Leg 6 ====================== -->
-      <!-- =================================================== -->
+      <!-- Leg 6 -->
       <link name="servomotor_16">
         <pose>-0.066695 -0.063697 0.2041193 0 0 0.78539</pose>
         <collision name="collision">
@@ -1492,12 +1480,12 @@ TODO: joint limits
         <inertial>
           <mass>0.011</mass>
           <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
           </inertia>
         </inertial>
       </link>
@@ -1632,7 +1620,7 @@ TODO: joint limits
         <inertial>
           <mass>0.5</mass>
           <inertia>
-            <ixx>0.0</ixx><!-- TODO -->
+            <ixx>0.0</ixx>
             <ixy>0.0</ixy>
             <ixz>0.0</ixz>
             <iyy>0.0</iyy>
@@ -1687,7 +1675,7 @@ TODO: joint limits
         <child>foot_6</child>
         <pose>0.0 0.0 0.031 0.0 0.0 0.0</pose>
         <axis>
-          <xyz>0.0 1.0 0.0</xyz><!-- TODO BUG -->
+          <xyz>0.0 1.0 0.0</xyz>
           <dynamics>
             <damping>0</damping><!-- TODO -->
             <friction>0</friction><!-- TODO -->
@@ -1705,10 +1693,7 @@ TODO: joint limits
       </joint>
 
 
-      <!-- =================================================== -->
-      <!-- ==================== Box - legs =================== -->
-      <!-- =================================================== -->
-
+      <!-- Box - legs -->
       <joint name="box_servomotor_1" type="fixed">
         <parent>box</parent>
         <child>servomotor_1</child>
@@ -1738,6 +1723,7 @@ TODO: joint limits
         <parent>box</parent>
         <child>servomotor_16</child>
       </joint>
+
     </model>
 
     <physics type="bullet">
