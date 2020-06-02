@@ -1,6 +1,6 @@
 # Kraby the Hexapod -- Robot description files
 
-SDF description of Kraby the hexapod.
+SDFormat description of Kraby the hexapod.
 It can be used to simulate the robot in Gazebo or BulletPhysics.
 
 ![Example of PyBullet simulation](doc/pybullet_fullrobot.png)

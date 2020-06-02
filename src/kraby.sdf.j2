@@ -1,4 +1,8 @@
 <?xml version="1.0" ?>
+{%- from 'links/endcap.sdf.j2' import endcap %}
+{%- from 'links/foot.sdf.j2' import foot %}
+{%- from 'links/joint.sdf.j2' import joint %}
+{%- from 'links/servomotor.sdf.j2' import servomotor %}
 
 <!--
 TODO: joint motorized
@@ -51,217 +55,13 @@ TODO: joint limits
       <!-- =================================================== -->
       <!-- ====================== Leg 1 ====================== -->
       <!-- =================================================== -->
-      <link name="servomotor_1">
-        <pose>.066695 -0.063697 0.2041193 0 0 -0.78539</pose>
-        <collision name="collision">
-          <pose>0 -0.002 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>.024 .0451 .0347</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/servomotor.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.047</mass>
-          <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
-          </inertia>
-        </inertial>
-      </link>
 
-      <link name="joint_1">
-        <pose>0.091561 -0.073562 0.2041193 0.0 0.0 -0.78539</pose>
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>0.073 0.040 0.040</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/joint.stl</uri>
-              <scale>0.001 0.001 0.001</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Blue</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.011</mass>
-          <inertia>
-            <ixx>3.6847327982785196</ixx>
-            <ixy>0.02825382432278616</ixy>
-            <ixz>0.03247685512442882</ixz>
-            <iyy>4.033791250199519</iyy>
-            <iyz>-0.0006925945535502276</iyz>
-            <izz>4.027664100211282</izz>
-          </inertia>
-        </inertial>
-      </link>
-
-      <link name="servomotor_2">
-        <pose>0.114846208538 -0.0958851709964 0.1961644 1.57079 -0.7854 -0.78539</pose>
-        <collision name="collision">
-          <pose>0 -0.002 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>.024 .0451 .0347</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/servomotor.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.047</mass>
-          <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
-          </inertia>
-        </inertial>
-      </link>
-
-      <link name="servomotor_3">
-        <pose>0.139887890732 -0.120708657232 0.161527 1.57079 2.3561945 -0.78539</pose>
-        <collision name="collision">
-          <pose>0 -0.002 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>.024 .0451 .0347</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/servomotor.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.047</mass>
-          <inertia>
-            <ixx>0.083</ixx><!-- TODO -->
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.083</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.083</izz>
-          </inertia>
-        </inertial>
-      </link>
-
-      <link name="foot_1">
-        <pose>0.144735157965 -0.126863982193 0.1226097 0.0 0.0 -0.78539</pose>
-        <collision name="collision">
-          <pose>0 0 -0.006 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.024 0.040 0.0993</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/foot.stl</uri>
-              <scale>0.001 0.001 0.001</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Blue</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.0105</mass>
-          <inertia>
-            <ixx>5.624930021684789</ixx>
-            <ixy>-0.0007514028791903619</ixy>
-            <ixz>0.0005912555287889139</ixz>
-            <iyy>4.568350194084484</iyy>
-            <iyz>0.020270474186461353</iyz>
-            <izz>1.7085021792735104</izz>
-          </inertia>
-        </inertial>
-      </link>
-
-      <link name="endcap_1">
-        <pose>0.145054064677 -0.127054191313 0.07309 0.0 0.0 -0.78539</pose>
-        <collision name="collision">
-          <geometry>
-            <mesh>
-              <uri>meshes/endcap.dae</uri>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>meshes/endcap.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Black</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.0</ixx>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.0</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.0</izz>
-          </inertia>
-        </inertial>
-        <!-- endcap has a negligeable inertia -->
-      </link>
-
+      {{- servomotor('servomotor_1', '.066695 -0.063697 0.2041193 0 0 -0.78539') }}
+      {{- joint('joint_1', '0.091561 -0.073562 0.2041193 0.0 0.0 -0.78539') }}
+      {{- servomotor('servomotor_2', '0.114846208538 -0.0958851709964 0.1961644 1.57079 -0.7854 -0.78539') }}
+      {{- servomotor('servomotor_3', '0.139887890732 -0.120708657232 0.161527 1.57079 2.3561945 -0.78539') }}
+      {{- foot('foot_1', '0.144735157965 -0.126863982193 0.1226097 0.0 0.0 -0.78539') }}
+      {{- endcap('endcap_1', '0.145054064677 -0.127054191313 0.07309 0.0 0.0 -0.78539') }}
 
       <joint name="servomotor_1_joint_1" type="revolute">
         <parent>servomotor_1</parent>
@@ -1760,3 +1560,4 @@ TODO: joint limits
     </physics>
   </world>
 </sdf>
+

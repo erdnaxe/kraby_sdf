@@ -1,0 +1,36 @@
+{% macro joint(name, pose) %}
+      <link name="{{ name }}">
+        <pose>{{ pose }}</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.073 0.040 0.040</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/joint.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+        <inertial>
+          <mass>0.011</mass>
+          <inertia>
+            <ixx>3.6847327982785196</ixx>
+            <ixy>0.02825382432278616</ixy>
+            <ixz>0.03247685512442882</ixz>
+            <iyy>4.033791250199519</iyy>
+            <iyz>-0.0006925945535502276</iyz>
+            <izz>4.027664100211282</izz>
+          </inertia>
+        </inertial>
+      </link>
+{% endmacro %}
