@@ -295,7 +295,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_2_servomotor_3" type="fixed">
+      <joint name="fixed_servomotor_2_servomotor_3" type="fixed">
         <parent>servomotor_2</parent>
         <child>servomotor_3</child>
       </joint>
@@ -317,7 +317,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_1_endcap_1" type="fixed">
+      <joint name="fixed_foot_1_endcap_1" type="fixed">
         <parent>foot_1</parent>
         <child>endcap_1</child>
       </joint>
@@ -569,7 +569,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_5_servomotor_6" type="fixed">
+      <joint name="fixed_servomotor_5_servomotor_6" type="fixed">
         <parent>servomotor_5</parent>
         <child>servomotor_6</child>
       </joint>
@@ -591,7 +591,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_2_endcap_2" type="fixed">
+      <joint name="fixed_foot_2_endcap_2" type="fixed">
         <parent>foot_2</parent>
         <child>endcap_2</child>
       </joint>
@@ -843,7 +843,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_8_servomotor_9" type="fixed">
+      <joint name="fixed_servomotor_8_servomotor_9" type="fixed">
         <parent>servomotor_8</parent>
         <child>servomotor_9</child>
       </joint>
@@ -865,7 +865,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_3_endcap_3" type="fixed">
+      <joint name="fixed_foot_3_endcap_3" type="fixed">
         <parent>foot_3</parent>
         <child>endcap_3</child>
       </joint>
@@ -1117,7 +1117,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_11_servomotor_12" type="fixed">
+      <joint name="fixed_servomotor_11_servomotor_12" type="fixed">
         <parent>servomotor_11</parent>
         <child>servomotor_12</child>
       </joint>
@@ -1139,7 +1139,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_4_endcap_4" type="fixed">
+      <joint name="fixed_foot_4_endcap_4" type="fixed">
         <parent>foot_4</parent>
         <child>endcap_4</child>
       </joint>
@@ -1391,7 +1391,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_14_servomotor_15" type="fixed">
+      <joint name="fixed_servomotor_14_servomotor_15" type="fixed">
         <parent>servomotor_14</parent>
         <child>servomotor_15</child>
       </joint>
@@ -1413,7 +1413,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_5_endcap_5" type="fixed">
+      <joint name="fixed_foot_5_endcap_5" type="fixed">
         <parent>foot_5</parent>
         <child>endcap_5</child>
       </joint>
@@ -1665,7 +1665,7 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="servomotor_17_servomotor_18" type="fixed">
+      <joint name="fixed_servomotor_17_servomotor_18" type="fixed">
         <parent>servomotor_17</parent>
         <child>servomotor_18</child>
       </joint>
@@ -1687,39 +1687,39 @@ TODO: joint limits
         </axis>
       </joint>
 
-      <joint name="foot_6_endcap_6" type="fixed">
+      <joint name="fixed_foot_6_endcap_6" type="fixed">
         <parent>foot_6</parent>
         <child>endcap_6</child>
       </joint>
 
 
       <!-- Box - legs -->
-      <joint name="box_servomotor_1" type="fixed">
+      <joint name="fixed_box_servomotor_1" type="fixed">
         <parent>box</parent>
         <child>servomotor_1</child>
       </joint>
 
-      <joint name="box_servomotor_4" type="fixed">
+      <joint name="fixed_box_servomotor_4" type="fixed">
         <parent>box</parent>
         <child>servomotor_4</child>
       </joint>
 
-      <joint name="box_servomotor_7" type="fixed">
+      <joint name="fixed_box_servomotor_7" type="fixed">
         <parent>box</parent>
         <child>servomotor_7</child>
       </joint>
 
-      <joint name="box_servomotor_10" type="fixed">
+      <joint name="fixed_box_servomotor_10" type="fixed">
         <parent>box</parent>
         <child>servomotor_10</child>
       </joint>
 
-      <joint name="box_servomotor_13" type="fixed">
+      <joint name="fixed_box_servomotor_13" type="fixed">
         <parent>box</parent>
         <child>servomotor_13</child>
       </joint>
 
-      <joint name="box_servomotor_16" type="fixed">
+      <joint name="fixed_box_servomotor_16" type="fixed">
         <parent>box</parent>
         <child>servomotor_16</child>
       </joint>
